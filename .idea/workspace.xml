@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="658be09e-9929-434f-816e-086a1dedf72a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/MidTerm_KetiKetelauri/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MidTerm_KetiKetelauri/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Work_6/app/src/main/java/com/example/work_6/Adapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Work_6/app/src/main/res/layout/prog_list.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MidTerm_KetiKetelauri/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MidTerm_KetiKetelauri/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +43,27 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Works" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\qetiq\GAU\4-1\Android\Works" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="Works" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\qetiq\GAU\4-1\Android\Works" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Work_6" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -91,7 +112,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.34089068" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.35870445" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />

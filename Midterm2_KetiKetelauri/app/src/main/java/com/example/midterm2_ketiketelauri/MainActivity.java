@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public Button n7;
     public Button n8;
     public Button n9;
+    public Button n0;
     public boolean Game = false;
     TextView screen;
 
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         n7 = findViewById(R.id.n7);
         n8 = findViewById(R.id.n8);
         n9 = findViewById(R.id.n9);
+        n0 = findViewById(R.id.n0);
         n1.setOnClickListener(this);
         n2.setOnClickListener(this);
         n3.setOnClickListener(this);
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         n7.setOnClickListener(this);
         n8.setOnClickListener(this);
         n9.setOnClickListener(this);
+        n0.setOnClickListener(this);
+
+
         screen = findViewById(R.id.calculatorscreen);
         ChangeButton(a);
 
@@ -70,8 +75,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     ChangeButton(a);
                     Game=false;
                     break;
+                case R.id.n0:
+                    System.exit(1);
+                    break;
             }
-        }{
+        }else{
             switch (v.getId()) {
                 case R.id.n1:
 
@@ -135,7 +143,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     ChangeButton(a);
                     check(9);
                     break;
-
+                case R.id.n0:
+                    System.exit(1);
+                    break;
 
             }
             Game=true;

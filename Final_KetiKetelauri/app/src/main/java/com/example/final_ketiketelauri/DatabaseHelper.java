@@ -30,11 +30,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Common column names
     private static final String KEY_ID = "id";
 
-    // schedule Table - column nmaes
+    // schedule Table - column names
     private static final String KEY_ScheduleTime = "scheduleTime";
     private static final String KEY_ScheduleAbout = "scheduleAbout";
     private static final String KEY_ScheduleDuration = "scheduleDuration";
-    private static final String KEY_ScheduleDone = "ScheduleDone";
+
 
     // cost Table - column names
     private static final String KEY_CostTime = "costTime";
@@ -46,8 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String CREATE_TABLE_Schedule = "CREATE TABLE "
             + TABLE_Schedule + "(" + KEY_ID + " INTEGER PRIMARY KEY," + KEY_ScheduleTime
             + " TEXT," + KEY_ScheduleAbout + " TEXT," + KEY_ScheduleDuration
-            + " INTEGER" + KEY_ScheduleDone
-            + "INTEGER" + ")";
+            + " INTEGER" + ")";
 
     // Tag table create statement
     private static final String CREATE_TABLE_COST = "CREATE TABLE " + TABLE_Cost
@@ -94,7 +93,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put (KEY_ScheduleTime, schedule.getScheduleTime());
         values.put(KEY_ScheduleAbout, schedule.getScheduleAbout());
         values.put(KEY_ScheduleDuration,schedule.getScheduleDuration());
-        values.put(KEY_ScheduleDone, schedule.getDone());
+
 
         // insert row
         long schedule_id = db.insert(TABLE_Schedule, null, values);
@@ -125,7 +124,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 td.setScheduleTime((c.getString(c.getColumnIndex(KEY_ScheduleTime))));
                 td.setScheduleAbout(c.getString(c.getColumnIndex(KEY_ScheduleAbout)));
                 td.setScheduleDuration(c.getInt(c.getColumnIndex(KEY_ScheduleDuration)));
-                td.setDone(c.getInt(c.getColumnIndex(KEY_ScheduleDone)));
+
 
                 // adding to todo list
                 schedules.add(td);
@@ -136,17 +135,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public int updateSchedule(Schedule schedule) {
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(KEY_ScheduleDone, schedule.getDone());
-
-
-        // updating row
-        return db.update(TABLE_Schedule, values, KEY_ID + " = ?",
-                new String[] { String.valueOf(schedule.getId()) });
-    }
+//    public int updateSchedule(Schedule schedule) {
+//        SQLiteDatabase db = this.getWritableDatabase();
+//
+//        ContentValues values = new ContentValues();
+//        values.put(KEY_Done, schedule.getDone());
+//
+//
+//        // updating row
+//        return db.update(TABLE_Schedule, values, KEY_ID + " = ?",
+//                new String[] { String.valueOf(schedule.getId()) });
+//    }
     public long createCost(Cost cost) {
         SQLiteDatabase db = this.getWritableDatabase();
 

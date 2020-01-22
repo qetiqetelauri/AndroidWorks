@@ -4,34 +4,27 @@ public class Schedule {
     String scheduleTime;
     String scheduleAbout;
     int  scheduleDuration;
-            int done;
+
 
     // constructors
     public Schedule() {
     }
 
-    public Schedule(int id, String scheduleTime, String scheduleAbout, int scheduleDuration, int done) {
+    public Schedule(int id, String scheduleTime, String scheduleAbout, int scheduleDuration ) {
         this.id = id;
         this.scheduleTime = scheduleTime;
         this.scheduleAbout = scheduleAbout;
         this.scheduleDuration = scheduleDuration;
-        this.done = done;
+
     }
-    public Schedule( String scheduleTime, String scheduleAbout, int scheduleDuration, int done) {
+    public Schedule( String scheduleTime, String scheduleAbout, int scheduleDuration) {
 
         this.scheduleTime = scheduleTime;
         this.scheduleAbout = scheduleAbout;
         this.scheduleDuration = scheduleDuration;
-        this.done = done;
+
     }
 
-    public int getDone() {
-        return done;
-    }
-
-    public void setDone(int done) {
-        this.done = done;
-    }
 
     public Schedule(String scheduleAbout, int scheduleDuration) {
         this.scheduleAbout = scheduleAbout;

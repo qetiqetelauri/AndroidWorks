@@ -15,6 +15,11 @@ public class Cost {
         this.costcost = costcost;
         this.costAbout = costAbout;
     }
+    public Cost( String costTime, int costcost, String costAbout) {
+        this.costTime = costTime;
+        this.costcost = costcost;
+        this.costAbout = costAbout;
+    }
 
     public int getId() {
         return id;

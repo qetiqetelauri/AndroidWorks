@@ -19,11 +19,13 @@
         <LinearLayout android:orientation="horizontal" android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content">
+
             <Button
                 android:id="@+id/btnAddSchedule"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Add Schedule " />
+
             <Button
                 android:id="@+id/btnAddCost"
                 android:layout_width="wrap_content"
@@ -31,34 +33,54 @@
                 android:text="Add Cost" />
 
         </LinearLayout>
+
+
     </LinearLayout>
-    <ScrollView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
         tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/txtcostDisplay"
+        <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp" />
-    </ScrollView>
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        tools:ignore="MissingConstraints">
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            tools:ignore="MissingConstraints">
 
-        <TextView
-            android:id="@+id/txtscheduleDisplay"
+            <TextView
+                android:id="@+id/txtcostDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp" />
+        </ScrollView>
+        <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp" />
-    </ScrollView>
+            android:layout_below="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            tools:ignore="MissingConstraints">
 
+            <TextView
+                android:id="@+id/txtscheduleDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp" />
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="166dp"
+        android:layout_height="172dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="64dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/Recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

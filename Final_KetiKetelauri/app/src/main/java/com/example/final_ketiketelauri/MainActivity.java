@@ -1,6 +1,8 @@
 package com.example.final_ketiketelauri;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -8,10 +10,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.final_ketiketelauri.Model.Cost;
 import com.example.final_ketiketelauri.Model.Schedule;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,6 +23,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTxtcostDisplay;
     private TextView mTxtscheduleDisplay;
     private static final String NEW_LINE = "\n\n";
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager layoutManager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +53,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(myIntent);
             }
         });
+        recyclerView = (RecyclerView) findViewById(R.id.Recycler);
+
+
+        getAllCost();
     }
 
     public void getAllSchedule(){
@@ -60,12 +71,17 @@ public class MainActivity extends AppCompatActivity {
     }
     public void getAllCost(){
         List<Cost> allCost = db.getAllCost();
-        StringBuilder textViewData = new StringBuilder();
+        ArrayList<String> costAbout = new ArrayList<>();
+
         for (Cost cost : allCost) {
-            textViewData.append("Time: ")
-                    .append(cost.getCostTime().toString()).append(NEW_LINE);
-            textViewData.append("About: ").append(cost.getCostTime()).append(NEW_LINE);
+            costAbout.add(cost.getCostAbout());
+
         }
-        mTxtscheduleDisplay.setText(textViewData.toString());
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mAdapter = new MyAdapter(this, costAbout);
+
+        recyclerView.setAdapter(mAdapter);
+//        mTxtscheduleDisplay.setText(textViewData.toString());
     }
+
 }
